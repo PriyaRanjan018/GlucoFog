@@ -1,0 +1,29 @@
+CONFIG mode=cloud patients=3 wan_ms=80.0 home_ms=50.0 interval_ms=5000.0 duration_ms=3600000
+Creating reading_filter on device cloud
+Creating hypo_hyper_detector on device cloud
+Creating clinic_aggregator on device cloud
+Creating cloud_analytics on device cloud
+0.0 Submitted application gluco_fog
+=========================================
+============== RESULTS ==================
+=========================================
+EXECUTION TIME : 3662
+=========================================
+APPLICATION LOOP DELAYS
+=========================================
+[CGM_READING, reading_filter, hypo_hyper_detector, ALERT] ---> 267.3297299483752
+=========================================
+TUPLE CPU EXECUTION DELAY
+=========================================
+FILTERED_GLUCOSE_DATA ---> 5.804302595410693
+CGM_READING ---> 0.06961734692699142
+CLINIC_SUMMARY ---> 10.022321428637952
+PATIENT_SUMMARY ---> 0.014548102785051063
+=========================================
+cloud : Energy Consumed = 4.799737665679575E9
+clinic-gateway : Energy Consumed = 3.003598800001221E8
+hub-0 : Energy Consumed = 2.96784E8
+hub-1 : Energy Consumed = 2.96784E8
+hub-2 : Energy Consumed = 2.96784E8
+Cost of execution in cloud = 6433146.279934876
+Total network usage = 52.72666666666667

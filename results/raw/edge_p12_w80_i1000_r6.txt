@@ -1,0 +1,84 @@
+CONFIG mode=edge patients=12 wan_ms=80.0 home_ms=50.0 interval_ms=1000.0 duration_ms=3600000
+Placement of operator reading_filter on device hub-0 successful.
+Placement of operator hypo_hyper_detector on device hub-0 successful.
+Placement of operator reading_filter on device hub-1 successful.
+Placement of operator hypo_hyper_detector on device hub-1 successful.
+Placement of operator reading_filter on device hub-2 successful.
+Placement of operator hypo_hyper_detector on device hub-2 successful.
+Placement of operator reading_filter on device hub-3 successful.
+Placement of operator hypo_hyper_detector on device hub-3 successful.
+Placement of operator reading_filter on device hub-4 successful.
+Placement of operator hypo_hyper_detector on device hub-4 successful.
+Placement of operator reading_filter on device hub-5 successful.
+Placement of operator hypo_hyper_detector on device hub-5 successful.
+Placement of operator reading_filter on device hub-6 successful.
+Placement of operator hypo_hyper_detector on device hub-6 successful.
+Placement of operator reading_filter on device hub-7 successful.
+Placement of operator hypo_hyper_detector on device hub-7 successful.
+Placement of operator reading_filter on device hub-8 successful.
+Placement of operator hypo_hyper_detector on device hub-8 successful.
+Placement of operator reading_filter on device hub-9 successful.
+Placement of operator hypo_hyper_detector on device hub-9 successful.
+Placement of operator reading_filter on device hub-10 successful.
+Placement of operator hypo_hyper_detector on device hub-10 successful.
+Placement of operator reading_filter on device hub-11 successful.
+Placement of operator hypo_hyper_detector on device hub-11 successful.
+Creating reading_filter on device hub-9
+Creating hypo_hyper_detector on device hub-9
+Creating cloud_analytics on device cloud
+Creating reading_filter on device hub-10
+Creating hypo_hyper_detector on device hub-10
+Creating clinic_aggregator on device clinic-gateway
+Creating reading_filter on device hub-0
+Creating hypo_hyper_detector on device hub-0
+Creating reading_filter on device hub-11
+Creating hypo_hyper_detector on device hub-11
+Creating reading_filter on device hub-1
+Creating hypo_hyper_detector on device hub-1
+Creating reading_filter on device hub-2
+Creating hypo_hyper_detector on device hub-2
+Creating reading_filter on device hub-3
+Creating hypo_hyper_detector on device hub-3
+Creating reading_filter on device hub-4
+Creating hypo_hyper_detector on device hub-4
+Creating reading_filter on device hub-5
+Creating hypo_hyper_detector on device hub-5
+Creating reading_filter on device hub-6
+Creating hypo_hyper_detector on device hub-6
+Creating reading_filter on device hub-7
+Creating hypo_hyper_detector on device hub-7
+Creating reading_filter on device hub-8
+Creating hypo_hyper_detector on device hub-8
+0.0 Submitted application gluco_fog
+=========================================
+============== RESULTS ==================
+=========================================
+EXECUTION TIME : 12133
+=========================================
+APPLICATION LOOP DELAYS
+=========================================
+[CGM_READING, reading_filter, hypo_hyper_detector, ALERT] ---> 6.019999999823291
+=========================================
+TUPLE CPU EXECUTION DELAY
+=========================================
+FILTERED_GLUCOSE_DATA ---> 2.0
+CGM_READING ---> 1.0
+CLINIC_SUMMARY ---> 0.022321428637951612
+PATIENT_SUMMARY ---> 9.821406940903637
+=========================================
+cloud : Energy Consumed = 4.795336475462862E9
+clinic-gateway : Energy Consumed = 3.013737057106456E8
+hub-0 : Energy Consumed = 3.002069486499903E8
+hub-1 : Energy Consumed = 3.004007758499904E8
+hub-2 : Energy Consumed = 3.002508244499903E8
+hub-3 : Energy Consumed = 3.0024113308999026E8
+hub-4 : Energy Consumed = 3.0030412692999035E8
+hub-5 : Energy Consumed = 3.003428923699903E8
+hub-6 : Energy Consumed = 3.0038650348999053E8
+hub-7 : Energy Consumed = 3.0040588620999056E8
+hub-8 : Energy Consumed = 3.0055610228999066E8
+hub-9 : Energy Consumed = 3.003525837299903E8
+hub-10 : Energy Consumed = 3.003041269299905E8
+hub-11 : Energy Consumed = 3.005073808099906E8
+Cost of execution in cloud = 193484.20013127947
+Total network usage = 640.05

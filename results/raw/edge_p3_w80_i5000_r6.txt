@@ -1,0 +1,39 @@
+CONFIG mode=edge patients=3 wan_ms=80.0 home_ms=50.0 interval_ms=5000.0 duration_ms=3600000
+Placement of operator reading_filter on device hub-0 successful.
+Placement of operator hypo_hyper_detector on device hub-0 successful.
+Placement of operator reading_filter on device hub-1 successful.
+Placement of operator hypo_hyper_detector on device hub-1 successful.
+Placement of operator reading_filter on device hub-2 successful.
+Placement of operator hypo_hyper_detector on device hub-2 successful.
+Creating cloud_analytics on device cloud
+Creating clinic_aggregator on device clinic-gateway
+Creating reading_filter on device hub-0
+Creating hypo_hyper_detector on device hub-0
+Creating reading_filter on device hub-1
+Creating hypo_hyper_detector on device hub-1
+Creating reading_filter on device hub-2
+Creating hypo_hyper_detector on device hub-2
+0.0 Submitted application gluco_fog
+=========================================
+============== RESULTS ==================
+=========================================
+EXECUTION TIME : 2976
+=========================================
+APPLICATION LOOP DELAYS
+=========================================
+[CGM_READING, reading_filter, hypo_hyper_detector, ALERT] ---> 6.019999999823491
+=========================================
+TUPLE CPU EXECUTION DELAY
+=========================================
+FILTERED_GLUCOSE_DATA ---> 2.0
+CGM_READING ---> 1.0
+CLINIC_SUMMARY ---> 0.022321428637951612
+PATIENT_SUMMARY ---> 9.720982142986022
+=========================================
+cloud : Energy Consumed = 4.795298435551846E9
+clinic-gateway : Energy Consumed = 3.007607251428049E8
+hub-0 : Energy Consumed = 3.090592730500013E8
+hub-1 : Energy Consumed = 3.089981930500013E8
+hub-2 : Energy Consumed = 3.090134630500013E8
+Cost of execution in cloud = 139554.20003281976
+Total network usage = 135.52777777777777
