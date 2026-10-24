@@ -1,0 +1,7 @@
+vendor/
+build/
+*.class
+.idea/
+.vscode/
+__pycache__/
+.venv/
