@@ -6,6 +6,8 @@ cd "$(dirname "$0")/.."
 
 V=vendor/iFogSim
 CP="build/ifogsim:$V/jars/*:$V/jars/commons-math3-3.5/*"
-mkdir -p build/classes
-javac -nowarn -cp "$CP" -d build/classes src/main/java/glucofog/*.java
+if [ -z "${GLUCOFOG_NO_BUILD:-}" ]; then
+  mkdir -p build/classes
+  javac -nowarn -cp "$CP" -d build/classes src/main/java/glucofog/*.java
+fi
 exec java -cp "build/classes:$CP" glucofog.GlucoFogSimulation "$@"
