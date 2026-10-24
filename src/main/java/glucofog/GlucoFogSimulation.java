@@ -215,8 +215,9 @@ public class GlucoFogSimulation {
 		app.addAppEdge("CGM_READING", "reading_filter", 1000, 500, "CGM_READING", Tuple.UP, AppEdge.SENSOR);
 		app.addAppEdge("reading_filter", "hypo_hyper_detector", 2000, 500, "FILTERED_GLUCOSE_DATA", Tuple.UP, AppEdge.MODULE);
 		app.addAppEdge("hypo_hyper_detector", "ALERT", 1000, 100, "ALERT_COMMAND", Tuple.DOWN, AppEdge.ACTUATOR);
-		app.addAppEdge("hypo_hyper_detector", "clinic_aggregator", 500, 1000, 3000, "PATIENT_SUMMARY", Tuple.UP, AppEdge.MODULE);
-		app.addAppEdge("clinic_aggregator", "cloud_analytics", 1000, 2000, 6000, "CLINIC_SUMMARY", Tuple.UP, AppEdge.MODULE);
+		// periodic edges take (periodicity, cpuLength, nwLength): a summary every 3 s / 6 s
+		app.addAppEdge("hypo_hyper_detector", "clinic_aggregator", 3000, 500, 1000, "PATIENT_SUMMARY", Tuple.UP, AppEdge.MODULE);
+		app.addAppEdge("clinic_aggregator", "cloud_analytics", 6000, 1000, 2000, "CLINIC_SUMMARY", Tuple.UP, AppEdge.MODULE);
 
 		app.addTupleMapping("reading_filter", "CGM_READING", "FILTERED_GLUCOSE_DATA", new FractionalSelectivity(1.0));
 		app.addTupleMapping("hypo_hyper_detector", "FILTERED_GLUCOSE_DATA", "ALERT_COMMAND", new FractionalSelectivity(1.0));
