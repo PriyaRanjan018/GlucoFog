@@ -222,7 +222,8 @@ public class GlucoFogSimulation {
 		app.addTupleMapping("reading_filter", "CGM_READING", "FILTERED_GLUCOSE_DATA", new FractionalSelectivity(1.0));
 		app.addTupleMapping("hypo_hyper_detector", "FILTERED_GLUCOSE_DATA", "ALERT_COMMAND", new FractionalSelectivity(1.0));
 		app.addTupleMapping("hypo_hyper_detector", "FILTERED_GLUCOSE_DATA", "PATIENT_SUMMARY", new FractionalSelectivity(0.2));
-		app.addTupleMapping("clinic_aggregator", "PATIENT_SUMMARY", "CLINIC_SUMMARY", new FractionalSelectivity(1.0));
+		// the aggregator absorbs patient summaries; only its periodic CLINIC_SUMMARY goes to the cloud
+		app.addTupleMapping("clinic_aggregator", "PATIENT_SUMMARY", "CLINIC_SUMMARY", new FractionalSelectivity(0.0));
 
 		final AppLoop alertLoop = new AppLoop(new ArrayList<String>() {{
 			add("CGM_READING"); add("reading_filter"); add("hypo_hyper_detector"); add("ALERT");
